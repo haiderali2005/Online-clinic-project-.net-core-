@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewData["Title"] = "about";
+    Layout = "~/Views/Shared/webui.cshtml";
+}
+
+<!-- Hero Area Start -->
+<div class="slider-area2 slider-height2 d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="hero-cap text-center pt-50">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End -->
+<!-- About Details Start -->
+<div class="about-details section-padding30">
+    <div class="container">
+        <div class="row">
+            <div class="offset-xl-1 col-lg-8">
+                <div class="about-details-cap mb-50">
+                    <h4>Our Mission</h4>
+                    <p>
+                        Welcome to [EliteCare], where healthcare meets convenience and efficiency. Founded with a vision to revolutionize the way clinics operate and patients access healthcare services, we are dedicated to providing a seamless and comprehensive solution for managing all aspects of clinic administration.
+
+                        At [EliteCare], we understand the challenges faced by healthcare providers in managing their clinics effectively while delivering high-quality care to their patients. That's why we've developed a user-friendly, secure, and customizable online platform designed to streamline clinic operations and enhance patient care experiences.
+
+                        Our team consists of seasoned professionals in healthcare, technology, and customer service, who are passionate about leveraging cutting-edge technology to simplify clinic management processes. We are committed to staying abreast of the latest advancements in the healthcare industry to ensure that our platform evolves with the changing needs of clinics and patients alike.
+
+                        Whether you're a solo practitioner, a multi-specialty clinic, or a healthcare institution, [Your Online Clinic Management Platform Name] offers a tailored solution to meet your unique needs. From appointment scheduling and patient records management to telemedicine consultations and billing integration, our platform provides all the tools you need to run your clinic efficiently and effectively.
+
+                        Above all, we prioritize security, confidentiality, and compliance with healthcare regulations to ensure the privacy and safety of patient information at all times. With [EliteCare], you can focus on what matters most – delivering exceptional care to your patients – while we take care of the rest.
+
+                        Join us in shaping the future of healthcare administration. Experience the convenience, efficiency, and peace of mind that come with [Your Online Clinic Management Platform Name].
+                    </p>
+                   
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Details End -->
+<!--? Team Start -->
+<div class="team-area section-padding30">
+    <div class="container">
+        <div class="row justify-content-sm-center">
+            <div class="cl-xl-7 col-lg-8 col-md-10">
+                <!-- Section Tittle -->
+                <div class="section-tittle text-center mb-70">
+                    <span>Our Professional members </span>
+                    <h2>Our Team Mambers</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- single Tem -->
+            @Html.Partial("doctor",  ViewData["teacher"]);
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+<!--? Contact form Start -->
+<div class="contact-form-main pb-top">
+    <div class="container">
+        <div class="row justify-content-md-end">
+            <div class="col-xl-7 col-lg-7">
+                <div class="form-wrapper">
+                    <!--Section Tittle  -->
+                    <div class="form-tittle">
+                        <div class="row ">
+                            <div class="col-xl-12">
+                                <div class="section-tittle section-tittle2 mb-70">
+                                    <h2>World's Leading Lab and Pharmacy!</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Section Tittle  -->
+                    <form id="contact-form" method="post" asp-action="feedsadd">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box user-icon mb-30">
+                                    <input type="text" name="feedback_name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-box message-icon mb-65">
+                                    <textarea name="feedback_message" id="message" placeholder="Message"></textarea>
+                                </div>
+                                <div class="submit-info">
+                                    <button class="btn submit-btn2" type="submit">Submit Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shape-dog -->
+                        <div class="shape-dog">
+                            <img src="~/assets2/img/gallery/shape1.png" alt="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact left Img-->
+    <div class="from-left d-none d-lg-block">
+        <img src="~/assets2/img/gallery/contact_form.png" alt="">
+    </div>
+</div>
+<!-- Contact form End -->
+

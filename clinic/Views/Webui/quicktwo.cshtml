@@ -1,0 +1,83 @@
+﻿@{
+    Layout = null;
+}
+
+@model List<scitwo>;
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/modal/fonts/icomoon/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/modal/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/modal/css/style.css">
+
+    <title>cart</title>
+</head>
+<body>
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal-body modal-content" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-body bg-4">
+
+
+                    <div class="d-flex main-content">
+
+                        <div>
+                            <div class="text-center">
+                                <h3>@Model[0].two_name</h3>
+                                <p>@Model[0].two_des</p>
+                            </div>
+                            <div class="coupon text-center">
+                                @Model[0].two_price
+                            </div>
+                            <form method="post" asp-action="cardtwoview">
+                                <p class="mt-4">
+                                    <input class="form-control text-center" name="cart_qty" placeholder="Enter your quantity" type="number" />
+                                    <input class="form-control text-center" name="carttwoname" placeholder="Enter your name" type="hidden" value="@Model[0].two_name" />
+                                    <input class="form-control text-center" name="cart_price" placeholder="Enter your price" type="hidden" value="@Model[0].two_price" />
+                                    <input type="hidden" value="@Model[0].two_img" name="carttwoimg" />
+                                    <input class="btn py-3 btn-primary btn-block mt-4" type="submit" value="Add to cart" />
+                                </p>
+                            </form>
+                            <p class="text-center">
+                                <a href="@Url.Action("twoproducts","webui")" class="cancel" data-dismiss="modal">Sorry, I don't want this.</a>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/modal/js/jquery-3.3.1.min.js"></script>
+    <script src="~/modal/js/popper.min.js"></script>
+    <script src="~/modal/js/bootstrap.min.js"></script>
+    <script src="~/modal/js/main.js"></script>
+</body>
+</html>
+

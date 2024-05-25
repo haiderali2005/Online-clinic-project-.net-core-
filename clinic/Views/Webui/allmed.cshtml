@@ -1,0 +1,16 @@
+﻿@model List<medicines>;
+@foreach   (var item in Model)
+{
+    <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="single-blogs mb-30">
+            <div class="blog-img">
+                <img src="@("~/medimages/"+item.med_image)" asp-append-version=true alt="">
+            </div>
+            <div class="blogs-cap">
+                <h4>@item.med_name</h4>
+                <p>@item.med_description</p>
+                <a href="@Url.Action("quickview","webui",new{id=item.med_id})" class="read-more1 mr-110">Quick view</a>
+            </div>
+        </div>
+    </div>
+}

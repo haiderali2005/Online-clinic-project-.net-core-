@@ -1,0 +1,18 @@
+﻿@model List<scientifictools>;
+@foreach (var item in Model)
+{
+    <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="single-blogs mb-30">
+            <div class="blog-img">
+                <img src="@("~/scitoolsimage/"+item.sci_image)" asp-append-version=true alt="">
+            </div>
+            <div class="blogs-cap">
+                <h4>@item.sci_name</h4>
+                <p>@item.sci_description</p>
+                <a href="@Url.Action("twoproducts","webui")" class="read-more1 mr-110">View more</a>
+            </div>
+        </div>
+    </div>
+
+}
+

@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "medproducts";
+    Layout = "~/Views/Shared/webui.cshtml";
+}
+
+
+
+
+<main>
+    <!-- Hero Area Start -->
+    <div class="slider-area2 slider-height2 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center pt-50">
+                        <h2>Scientific Tools</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Area End -->
+    <!--? Blog start -->
+    <div class="home_blog-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-sm-center">
+                <div class="cl-xl-7 col-lg-8 col-md-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-70">
+                        <span>Our recent new</span>
+                        <h2>Scientific Machine</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @Html.Partial("alltools",  ViewData["scitwo"]);
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+    <!--? contact-animal-owner Start -->
+    <div class="contact-animal-owner section-bg" data-background="/assets2/img/gallery/section_bg04.png">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact_text text-center">
+                        <div class="section_title text-center">
+                            <h3>Any time you can call us!</h3>
+                            <p>Because we know that even the best technology is only as good as the people behind it. 24/7 tech support.</p>
+                        </div>
+                        <div class="contact_btn d-flex align-items-center justify-content-center">
+                            <a href="contact.html" class="btn white-btn">Contact Us</a>
+                            <p>Or<a href="#"> +880 4664 216</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact-animal-owner End -->
+</main>
+
+
+
+

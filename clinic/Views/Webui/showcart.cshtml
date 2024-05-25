@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "showcart";
+    Layout = "~/Views/Shared/webui.cshtml";
+}
+@model List<cart>;
+<!-- Hero Area Start -->
+<div class="slider-area2 slider-height2 d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="hero-cap text-center pt-50">
+                    <h2>View cart</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End -->
+<div class="container px-3 my-5 clearfix mt-4">
+    <!-- Shopping cart table -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Shopping Cart</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered m-0">
+                <thead>
+                  <tr>
+                    <!-- Set columns width -->
+                    <th class="text-center py-3 px-4" style="min-width: 400px;">Products &amp; Details</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
+                    <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
+                    <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
+                  </tr>
+                </thead>
+                <tbody>
+               @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="p-4">
+                                    <div class="media align-items-center">
+                                        <img src="@("~/medimages/"+item.cart_img )" asp-append-version=true width="200px" height="200px" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                                        <div class="media-body">
+                                            <a href="#" class="d-block text-dark">@item.cart_name</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right font-weight-semibold align-middle p-4">@item.cart_price</td>
+                                <td class="align-middle p-4"><input type="text" class="form-control text-center" value="@item.cart_qty"></td>
+                                <td class="text-right font-weight-semibold align-middle p-4">@item.cart_bill</td>
+                                <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
+                            </tr>
+                        }
+                </tbody>
+              </table>
+            </div>
+            <!-- / Shopping cart table -->
+        
+           
+        
+            <div class="float-right">
+                <a href="@Url.Action("medproducts","webui")"><button type="button" class="btn btn-lg btn-default md-btn-flat mt-4 mr-3">Back to shopping</button></a>
+            </div>
+        
+          </div>
+      </div>
+  </div>
+

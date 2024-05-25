@@ -1,0 +1,88 @@
+﻿@model List<client>;
+@{
+    Layout = null;
+}
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>register</title>
+
+    <link rel="stylesheet" href="~/login/style3.css">
+
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+
+    <section>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+
+        <div class="signin">
+
+            <div class="content">
+
+                <h2>Your Profile</h2>
+                <form method="post">
+
+                    <div class="form">
+                        <input type="hidden" name="client_id" value="@Model[0].client_id" required> <i>Username</i>
+                        <div class="inputBox">
+
+                            <input type="text" name="client_name" value="@Model[0].client_name" required> <i>Username</i>
+
+                        </div>
+                        <div class="inputBox">
+
+                            <input type="email" name="client_email" value="@Model[0].client_email" required> <i>Email</i>
+
+                        </div>
+                        <div class="inputBox">
+
+                            <input type="text" name="client_country" value="@Model[0].client_country" required> <i>Country</i>
+
+                        </div>
+                        <div class="inputBox">
+
+                            <input type="text" name="client_gender" value="@Model[0].client_gender" required> <i>Gender</i>
+
+                        </div>
+
+                        <div class="inputBox">
+
+                            <input name="client_password" type="password" value="@Model[0].client_password" required> <i>Password</i>
+
+                        </div>
+
+                        <div class="links">
+                            <a href="@Url.Action("forgot","webui")">Forgot Password</a> <a href="@Url.Action("login","webui")">Sign in</a>
+
+                        </div>
+
+                        <div class="inputBox">
+
+                            <input type="submit" value="Save changes">
+
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </section> <!-- partial -->
+
+</body>
+
+</html>
+
+
+

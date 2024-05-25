@@ -1,0 +1,16 @@
+﻿@model List<scitwo>;
+@foreach   (var item in Model)
+{
+    <div class="col-xl-4 col-lg-4 col-md-6">
+        <div class="single-blogs mb-30">
+            <div class="blog-img">
+                <img src="@("~/medimages/"+item.two_img)" asp-append-version=true alt="">
+            </div>
+            <div class="blogs-cap">
+                <h4>@item.two_name</h4>
+                <p>@item.two_des</p>
+                <a href="@Url.Action("quicktwo","webui",new{id=item.two_id})" class="read-more1 mr-110">Quick view</a>
+            </div>
+        </div>
+    </div>
+}

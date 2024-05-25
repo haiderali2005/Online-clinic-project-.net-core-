@@ -1,0 +1,15 @@
+﻿@model List<teachers>;
+@foreach (var item in Model)
+{
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+        <div class="single-team mb-30">
+            <div class="team-img">
+                <img src="@("~/teacherimg/"+item.teacher_img)" asp-append-version=true alt="">
+            </div>
+            <div class="team-caption">
+                <span>@item.teacher_name</span>
+                <h3><a href="#">Doctor</a></h3>
+            </div>
+        </div>
+    </div>
+}
